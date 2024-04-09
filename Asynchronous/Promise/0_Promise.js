@@ -6,6 +6,9 @@
  *  5. If the promise have an error occurs, the reject function is called.
  *
  * **/
+
+
 let promise = new Promise(function(resolve, reject){
 
 });
+
