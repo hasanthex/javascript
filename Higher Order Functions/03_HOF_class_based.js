@@ -1,13 +1,20 @@
 class StringHelper {
-    
-    static makeUpper(string){
+    setString(value, fun){
+        return fun(value);
+    }
+
+    makeUpper(string){
         return `${string.toUpperCase()}`;
     }
 
-    static makeLower(string){
+    makeLower(string){
         return `${string.toLowerCase()}`;
     }
-
 }
 
-const string_1 = StringHelper.makeLower();
+const string = new StringHelper();
+
+const uppercase = string.setString("Hello", string.makeUpper);
+const lowercase = string.setString("BANGLADESH", string.makeLower);
+
+console.log(uppercase, lowercase);
